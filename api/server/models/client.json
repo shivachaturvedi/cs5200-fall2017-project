@@ -1,0 +1,138 @@
+{
+  "name": "Client",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "widgets": {
+      "type": "hasMany",
+      "model": "Widget",
+      "foreignKey": ""
+    },
+    "profiles": {
+      "type": "hasOne",
+      "model": "Profile",
+      "foreignKey": ""
+    },
+    "parties": {
+      "type": "hasMany",
+      "model": "Party",
+      "foreignKey": ""
+    },
+    "ratings": {
+      "type": "hasMany",
+      "model": "Rating",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "__create__widgets"
+      ]
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": [
+        "__get__widgets",
+        "__findById__widgets"
+      ]
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "__create__parties"
+      ]
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": [
+        "__get__parties",
+        "__findById__parties"
+      ]
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": [
+        "__get__parties",
+        "__findById__parties",
+        "__updateAttribute__parties",
+        "__destroyById__parties"
+      ]
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "__create__profiles"
+      ]
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": [
+        "__get__profiles",
+        "__findById__profiles",
+        "__updateAttribute__profiles",
+        "__destroyById__profiles"
+      ]
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "__get__profiles",
+        "__findById__profiles"
+      ]
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "__get__ratings",
+        "__findById__rating"
+      ]
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": [
+        "__get__ratings",
+        "__findById__ratings",
+        "__updateAttribute__ratings",
+        "__destroyById__ratings"
+      ]
+    }
+  ],
+  "methods": {}
+}

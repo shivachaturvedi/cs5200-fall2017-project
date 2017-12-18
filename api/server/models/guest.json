@@ -1,0 +1,36 @@
+{
+  "name": "Guest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "parties": {
+      "type": "hasMany",
+      "model": "Party",
+      "foreignKey": ""
+    }
+  },
+  "acls": [{
+    "accessType": "*",
+    "principalType": "ROLE",
+    "principalId": "$everyone",
+    "permission": "DENY"
+  }],
+  "methods": {}
+}

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "react": "^15.4.2",
+    "react-bootstrap": "^0.31.5",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
     "react-router": "^3.0.2",
@@ -47,10 +48,19 @@
         "error",
         "prefer-double"
       ],
-      "no-unused-vars": ["error", { "varsIgnorePattern": "React" }],
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "React"
+        }
+      ],
       "no-shadow": 0,
-      "react/jsx-uses-vars": [2],
-      "react/require-default-props": [0],
+      "react/jsx-uses-vars": [
+        2
+      ],
+      "react/require-default-props": [
+        0
+      ],
       "react/jsx-filename-extension": [
         1,
         {

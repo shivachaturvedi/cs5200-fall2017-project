@@ -13,7 +13,7 @@ function checkAuthorization (dispatch) {
     // time of the token vs the ttl (time to live) seconds
     const createdDate = new Date(token.created)
     const created = Math.round(createdDate.getTime() / 1000)
-    const ttl = 1209600
+    const ttl = 12
     const expiry = created + ttl
 
     // if the token has expired return false

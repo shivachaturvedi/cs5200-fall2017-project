@@ -15,6 +15,9 @@ import App from './App'
 import Login from './login'
 import Signup from './signup'
 import Widgets from './widgets'
+import Profile from './Profile'
+import CreateParty from './CreateParty'
+import DisplayParties from './DisplayParties'
 import './index.css'
 
 // Import the index reducer and sagas
@@ -54,6 +57,9 @@ ReactDOM.render(
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route onEnter={checkWidgetAuthorization(store)} path="/widgets" component={Widgets} />
+        <Route onEnter={checkWidgetAuthorization(store)} path="/Profile" component={Profile} />
+        <Route onEnter={checkWidgetAuthorization(store)} path="/CreateParty" component={CreateParty} />
+        <Route onEnter={checkWidgetAuthorization(store)} path="/DisplayParties" component={DisplayParties} />
       </Route>
     </Router>
   </Provider>,

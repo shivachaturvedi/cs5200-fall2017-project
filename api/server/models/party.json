@@ -1,0 +1,58 @@
+{
+  "name": "Party",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "maxPeople": {
+      "type": "number"
+    },
+    "location": {
+      "type": "string"
+    },
+    "startTime": {
+      "type": "date"
+    },
+    "entTime": {
+      "type": "date"
+    },
+    "entryFee": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "guests": {
+      "type": "hasMany",
+      "model": "Guest",
+      "foreignKey": ""
+    },
+    "ratings": {
+      "type": "hasMany",
+      "model": "Rating",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+  {
+    "accessType": "WRITE",
+    "principalType": "ROLE",
+    "principalId": "$owner",
+    "permission": "ALLOW",
+    "property": [
+      "__get__guests",
+      "__findById__guests",
+      "__updateAttribute__guests",
+      "__destroyById__guests"
+    ]
+  }],
+  "methods": {}
+}

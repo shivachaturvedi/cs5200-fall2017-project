@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysql": {
+    "host": "mysqlDb",
+    "port": 3306,
+    "database": "hooper",
+    "password": "In4mation",
+    "name": "mysql",
+    "connector": "mysql",
+    "user": "hooperadmin"
+  }
+}

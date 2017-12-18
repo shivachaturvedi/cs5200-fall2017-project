@@ -36,7 +36,8 @@
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="number"] {
+input[type="number"],
+input[type="datetime-local"]{
   display: block;
   margin: 0;
   width: 100%;
@@ -49,7 +50,8 @@ input[type="number"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
-input[type="number"]:focus {
+input[type="number"]:focus,
+input[type="datetime-local"]:focus{
   outline: none;
 }
 
@@ -113,7 +115,8 @@ hr {
 .widget-form input[type="text"],
 .widget-form input[type="email"],
 .widget-form input[type="password"],
-.widget-form input[type="number"] {
+.widget-form input[type="number"],
+.widget-form input[type="datetime-local"]{
   padding: 10px;
   border: solid 1px #dcdcdc;
   transition: box-shadow 0.3s, border 0.3s;
@@ -123,7 +126,8 @@ hr {
 .widget-form input[type="text"]:focus,
 .widget-form input[type="email"]:focus,
 .widget-form input[type="password"]:focus,
-.widget-form input[type="number"]:focus{
+.widget-form input[type="number"]:focus,
+.widget-form input[type="datetime-local"]:focus{
   border: solid 1px #0FBBEC;
   box-shadow: 0 0 10px 0px #61dafb;
 }
